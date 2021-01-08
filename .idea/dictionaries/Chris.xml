@@ -6,6 +6,8 @@
       <w>itoa</w>
       <w>prec</w>
       <w>pstr</w>
+      <w>scanf</w>
+      <w>scanln</w>
       <w>sprintf</w>
       <w>strconv</w>
     </words>
