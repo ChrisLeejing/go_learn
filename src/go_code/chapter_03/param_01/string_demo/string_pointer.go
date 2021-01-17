@@ -1,4 +1,4 @@
-/**
+/*
  * This is description.
  *
  * @author Chris0710
@@ -8,7 +8,8 @@ package main
 
 import (
 	"fmt"
-	"go_code/chapter_03/param_01/book_demo"
+	// "go_code/chapter_03/param_01/book_demo"
+	book "go_code/chapter_03/param_01/book_demo" // 包名过长, 支持给包名取别名, 但是原包名则失效, 需要使用别名来访问该包中的函数和变量.
 )
 
 func main() {
@@ -47,7 +48,9 @@ func main() {
 	*/
 
 	// 输出book_demo package中的变量Book1.
-	fmt.Println("输出book_demo package中的变量Book1:", book_demo.Book1)
-	sum, sub := book_demo.SumAndSub(10, 20)
+	// fmt.Println("输出book_demo package中的变量Book1:", book_demo.Book1)
+	fmt.Println("输出book_demo package中的变量Book1:", book.Book1)
+	// sum, sub := book_demo.SumAndSub(10, 20)
+	sum, sub := book.SumAndSub(10, 20)
 	fmt.Printf("sum = %v, sub = %v", sum, sub)
 }

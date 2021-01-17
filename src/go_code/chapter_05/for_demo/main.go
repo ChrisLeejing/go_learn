@@ -1,4 +1,4 @@
-/**
+/*
  * This is description.
  *
  * @author Chris0710
@@ -75,7 +75,7 @@ func main() {
 	// 需求: 随机给出一个1~100之间的数, 知道生成这个数为99停止, 看看一共用了多少次?
 	// time.Now().Unix(): 返回一个从1970年01月01日 00:00:00 时间到现在的秒数.
 	var count int = 0
-	rand.Seed(time.Now().UnixNano())
+	rand.Seed(time.Now().UnixNano()) // 生成一个随机数种子, 为了使每一次产生的随机数不同.
 	for {
 		num := rand.Intn(100) + 1
 		count++

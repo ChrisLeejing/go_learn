@@ -1,4 +1,4 @@
-/**
+/*
  * This is description.
  *
  * @author Chris0710

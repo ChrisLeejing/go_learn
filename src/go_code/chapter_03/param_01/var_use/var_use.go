@@ -1,4 +1,4 @@
-/**
+/*
  * This is description.
  * How to use variable in go.
  * @author Chris0710
