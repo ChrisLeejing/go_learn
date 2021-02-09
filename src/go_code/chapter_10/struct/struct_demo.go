@@ -9,6 +9,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"go_code/chapter_10/factory"
 )
 
 // 1. 结构体创建时, 字段默认值: 布尔类型(false), 数值(0), 字符串(""); 引用类型: 指针(nil), map(nil), slice(nil), 其中nil表示还没有分配空间, 需要先make后, 再进行使用.
@@ -159,5 +160,54 @@ func main() {
 		fmt.Println("json处理错误: ", err)
 	}
 	fmt.Println("jsonString: ", string(h1Json)) // jsonString:  {"name":"风清扬","age":60,"skill":"独孤九剑"}, 注: 字段中的大写变为了小写.
+
+	// 9. 创建结构体时, 指定字段值.
+	// 方式一: 返回结构体
+	book9 := Book{"Kubernetes in Action", 40.99}
+	var book10 = Book{"Spring in Action", 50.90}
+	fmt.Println(book9, book10)
+
+	book11 := Book{
+		Name:  "spring boot in action",
+		price: 41.90,
+	}
+	var book12 = Book{
+		Name:  "Spring microservice in action",
+		price: 55.90,
+	}
+
+	fmt.Println(book11, book12)
+
+	// 方式二: 返回结构体指针.
+	var book13 *Book = &Book{"文明之光", 30.99}
+	book14 := &Book{"格局", 40.99}
+	book15 := &Book{
+		Name:  "蒋勋说红楼梦",
+		price: 19.99,
+	}
+	var book16 *Book = &Book{
+		Name:  "爱你就像爱生命",
+		price: 20.99,
+	}
+	fmt.Println(*book13, *book14, *book15, *book16)
+
+	// 10. 工厂模式
+	// 情况1: 当结构体的变量首字母为大写时, 通过<package_name>.<struct_name>可以进行调用.
+	// p10 := factory.People{
+	// 	Name:  "tom",
+	// 	Score: 80.90,
+	// }
+	// fmt.Println("p10 =", p10)
+
+	// 情况2: 当结构体的变量首字母为小写时, 可以通过创建工厂方法进行调用.
+	// p11 := factory.NewPeople("chris", 100)
+	// fmt.Println("p11 = ", *p11)
+	// fmt.Println("people name: ", p11.Name, ", people score: ", p11.Score)
+
+	// 情况3: 当结构体的变量首字母为小写时, 且其中的Name字段也是小写.
+	p12 := factory.NewPeople("bob", 100)
+	fmt.Println("p12 = ", *p12)
+	// fmt.Println("people name: ", p12.name, ", people score: ", p12.Score) // 编译报错.
+	fmt.Println("people name: ", p12.GetName(), ", people score: ", p12.Score)
 
 }
