@@ -2,6 +2,9 @@
   <dictionary name="Chris">
     <words>
       <w>asicc</w>
+      <w>bufio</w>
+      <w>delim</w>
+      <w>ioutil</w>
       <w>isstrconv</w>
       <w>istio</w>
       <w>itoa</w>

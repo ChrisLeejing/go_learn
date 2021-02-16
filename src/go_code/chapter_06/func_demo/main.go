@@ -100,7 +100,7 @@ func init() {
 	2. init()作用: 在程序开始之前, 进行一些初始化的工作.
 	3. 执行顺序:
 		场景:
-		main.go								util.go
+		read_demo.go								util.go
 		import (						// 执行顺序1: 全局变量       <------
 			util						var b string
 		)

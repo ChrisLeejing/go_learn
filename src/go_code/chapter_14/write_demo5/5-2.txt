@@ -1,0 +1,5 @@
+hello, golang 5-1.
+hello, golang 5-1.
+hello, golang 5-1.
+hello, golang 5-1.
+hello, golang 5-1.
