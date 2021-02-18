@@ -1,9 +1,10 @@
 /*
  * This is description.
  * 需求: 创建1.txt文件, 并向其中写入5行"hello, golang."
+   参考: Golang简单写文件操作的四种方法: https://studygolang.com/articles/2073
  * @author Chris0710
  * @date 2021/2/15 12:03
- */
+*/
 package main
 
 import (
