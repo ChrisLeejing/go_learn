@@ -4,6 +4,7 @@
       <w>asicc</w>
       <w>bufio</w>
       <w>delim</w>
+      <w>goruntine</w>
       <w>ioutil</w>
       <w>isstrconv</w>
       <w>istio</w>
@@ -13,6 +14,7 @@
       <w>scanf</w>
       <w>scanln</w>
       <w>sprintf</w>
+      <w>sqrt</w>
       <w>strconv</w>
     </words>
   </dictionary>
