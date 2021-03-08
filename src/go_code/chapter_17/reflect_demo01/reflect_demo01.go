@@ -79,7 +79,7 @@ func ReflectTest02(i interface{}) {
 	// 3. 获取变量对应的kind.
 	tKind := rType.Kind()
 	vKind := rValue.Kind()
-	fmt.Printf("tKind: %v, vKind: %v\n", tKind, vKind)
+	fmt.Printf("tKind: %v, vKind: %v\n", tKind, vKind) // tKind: struct, vKind: struct
 
 	// 4. 将reflect.Value转换为interface{}
 	v1 := rValue.Interface()
