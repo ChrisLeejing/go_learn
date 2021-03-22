@@ -5,12 +5,22 @@
       <w>bufio</w>
       <w>delim</w>
       <w>goruntine</w>
+      <w>hget</w>
+      <w>hmget</w>
+      <w>hmset</w>
+      <w>hset</w>
       <w>ioutil</w>
       <w>isstrconv</w>
       <w>istio</w>
       <w>itoa</w>
+      <w>lpush</w>
+      <w>lrange</w>
+      <w>mget</w>
+      <w>mset</w>
+      <w>mylist</w>
       <w>prec</w>
       <w>pstr</w>
+      <w>redigo</w>
       <w>scanf</w>
       <w>scanln</w>
       <w>sprintf</w>
